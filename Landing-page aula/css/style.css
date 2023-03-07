@@ -20,6 +20,9 @@
     box-sizing: border-box;
 }
 
+
+/*desktop first*/
+
 .layout-grid {
     width: 100%;
     height: 100%;
@@ -29,6 +32,10 @@
 
 
 /* cabecalho */
+
+header #menu-hamburger {
+    display: none;
+}
 
 header {
     background-color: #f9003d;
@@ -179,3 +186,58 @@ main .participantes h4 {
 
 /* info box */
 
+main #local {
+    display: flex;
+    position: relative;
+    top: 300px;
+
+}
+
+main #local h6 {
+    border: #A259F7;
+    display: flex;
+    position: relative;
+    top: 40px;
+    font-size: 28px;
+    font-family: "courier";
+  
+}
+
+main #local h5 {
+    font-family: "courier";
+    font-size: 24px;
+}
+
+/*smartphone*/
+
+@media screen and (max-width:767px) {
+    main {
+       display: none;
+    
+    }
+header nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 80vw;
+    max-width: 360px;
+    height: 100vh;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9003d;
+}
+
+header nav a {
+    width: 150px;
+    margin-bottom: 30px;
+    border-left: 2px dashed white;
+    border-radius: 0;
+    font-size: 24px;
+}
+
+header #menu-hamburger {
+    display: block;
+}
+}
