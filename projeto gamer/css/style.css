@@ -5,11 +5,48 @@
     box-sizing: border-box;
 }
 
+/*classe genèrica*/
+.layout-grid {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+   /* border: 1px solid salmon;*/
+}
+
 body {
-   color: white ;
+    color: white;
 }
 
 /*header*/
+/*mobile first*/
 header {
+    height: 60px;
     background-color: #1B1426;
 }
+
+header .header-top {
+    display: none;
+}
+
+
+header nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 80vw;
+    height: 100vh;
+    background-color: grey;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header .menu-usuarios {
+    display: none;
+}
+
+.alinhamento-between-center {
+    display: flex;
+ justify-content: space-between;
+}
+
