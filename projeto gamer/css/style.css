@@ -1,3 +1,10 @@
+/* import de fonts */
+@font-face {
+    font-family: inter;
+    src: url(../assets/fontes/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+
 /*reset*/
 * {
     margin: 0;
@@ -10,7 +17,7 @@
     width: 90%;
     height: 100%;
     margin: 0 auto;
-   /* border: 1px solid salmon;*/
+    /* border: 1px solid salmon;*/
 }
 
 body {
@@ -29,24 +36,58 @@ header .header-top {
 }
 
 
-header nav {
+header .header-bottom nav {
     position: fixed;
     top: 60px;
     left: 0;
-    width: 80vw;
-    height: 100vh;
-    background-color: grey;
-
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 80vw;
+    height: calc(100vh - 60px);
+    padding-bottom:20px ;
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7),
+            rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
+
 }
 
+header .header-bottom nav > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+
+    border-bottom: 1px solid #f9aa01;
+    padding: 30px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inter;
+   
+}
+
+header .header-bottom nav a:last-of-type {
+    border-bottom: none;
+}
+
+header .header-bottom nav .midia-sociais {
+    display: flex;
+   position: absolute;
+   bottom: 20px;
+   left: 0;
+    width: 100%;
+
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+}
 header .menu-usuarios {
     display: none;
 }
 
 .alinhamento-between-center {
     display: flex;
- justify-content: space-between;
+    justify-content: space-between;
 }
-
