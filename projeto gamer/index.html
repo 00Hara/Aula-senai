@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    
     <header>
         <div class="header-top">
             <div class="layout-grid">
@@ -41,14 +42,14 @@
         <div class="header-bottom">
             <div class="layout-grid alinhamento-between-center">
                 <!--menu hamburger apenas visivel no mobile-->
-                <img src="assets/icons/Vectormenu.svg" alt="abre e fecha menu principal">
+                <img onclick="mostrarMenu()" src="assets/icons/Vectormenu.svg" alt="abre e fecha menu principal">
 
 
                 <img class="logo" src="assets/images/logotipo-gamerlogo-desktop.svg"
                     alt="imagem logo tipo gamer com um controle de video game ao centro">
 
                     <!--visivel apenas no mobile-->
-                <nav class="menu">
+                <nav class="menu"  id="menu">
                     <a href="">ìnicio</a>
                     <a href="">Jogadores</a>
                     <a href="">Equipes</a>
@@ -80,9 +81,9 @@
 
                 <!--menu 3 pontinhos apenas visual no mobile-->
 
-                <img src="assets/icons/Vector3 ponto.svg" alt="icone 3 pontinhos, abre e fecha o menu de usuarios">
+                <img onclick="mostrarLateral()" src="assets/icons/Vector3 ponto.svg" alt="icone 3 pontinhos, abre e fecha o menu de usuarios">
 
-                <div class="menu-usuarios">
+                <div class="menu-usuarios" id="menu-lateral">
                     <a href="">
                         <img src="assets/icons/Vectorusuario.svg" alt="icone de perfil">
                     </a>
@@ -98,6 +99,19 @@
 
         </div>
     </header>
+
+    <script>
+        function mostrarMenu() {
+            //pega a navbar pelo id
+            document.getElementById("menu").classList.toggle("mostrar-menu")
+        }
+
+        function mostrarLateral() {
+            document.getElementById("menu-lateral").classList.toggle("mostrarLateral")
+        }
+    </script>
+
+   
 </body>
 
 </html>
