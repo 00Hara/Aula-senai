@@ -12,37 +12,39 @@
 <body>
     <main>
         <header>
-            <div class="header-top">
-                <div class="layout-grid">
-                    <div class="contatos">
+            <div class="header-top ">
+                <div class="layout-grid alinhamento-between-center ">
+                    <div class="contatos ">
                         <div class="phone">
                             <img src="assets/icons/icone_telefoneicon telefone.svg" alt="icone do telefone de contato">
-                            <p>(11) 0900-1010</p>
+                            <span>(11) 0900-1010</span>
                         </div>
                         <div class="mail">
                             <img src="assets/icons/icone_emailicon email.svg" alt="ìcone de email de contato">
-                            <p>contato@gamer.com.br</p>
+                            <span>contato@gamer.com.br</span>
                         </div>
                     </div>
-                </div>
-                <div class="midia-sociais">
-                    <a href="">
-                        <img src="assets/icons/Vectoricon facebook.svg" alt="imagem link do facebook da empresa">
-                    </a>
-                    <a href="">
-                        <img src="assets/icons/Vectoricon linkedin.svg" alt="imagem link do linkedin da empresa">
-                    </a>
-                    <a href="">
-                        <img src="assets/icons/Vectoricon insta.svg" alt="imagem link do instagram da empresa">
-                    </a>
 
+                    <div class="midia-sociais">
+                        <a href="">
+                            <img src="assets/icons/Vectoricon facebook.svg" alt="imagem link do facebook da empresa">
+                        </a>
+                        <a href="">
+                            <img src="assets/icons/Vectoricon linkedin.svg" alt="imagem link do linkedin da empresa">
+                        </a>
+                        <a href="">
+                            <img src="assets/icons/Vectoricon insta.svg" alt="imagem link do instagram da empresa">
+                        </a>
+
+                    </div>
                 </div>
             </div>
 
             <div class="header-bottom">
                 <div class="layout-grid alinhamento-between-center">
                     <!--menu hamburger apenas visivel no mobile-->
-                    <img onclick="mostrarMenu()" src="assets/icons/Vectormenu.svg" alt="abre e fecha menu principal">
+                    <img class="menu-hamburger" onclick="mostrarMenu()" src="assets/icons/Vectormenu.svg"
+                        alt="abre e fecha menu principal">
 
 
                     <img class="logo" src="assets/images/logotipo-gamerlogo-desktop.svg"
@@ -53,7 +55,7 @@
                         <a href="">ìnicio</a>
                         <a href="">Jogadores</a>
                         <a href="">Equipes</a>
-                        <a href="">noticias</a>
+                        <a href="">Noticias</a>
 
                         <a class="phone">
                             <img src="assets/icons/icone_telefoneicon telefone.svg" alt="icone do telefone de contato">
@@ -83,7 +85,7 @@
 
                     <!--menu 3 pontinhos apenas visual no mobile-->
 
-                    <img onclick="mostrarLateral()" src="assets/icons/Vector3 ponto.svg"
+                    <img class="menu-pontinhos" onclick="mostrarLateral()" src="assets/icons/Vector3 ponto.svg"
                         alt="icone 3 pontinhos, abre e fecha o menu de usuarios">
 
                     <div class="menu-usuarios" id="menu-lateral">
@@ -111,11 +113,11 @@
         <section class="sessao-gamer">
             <div class="cards">
                 <div class="fifa">
-                    <img src="../projeto gamer/assets/images/fifa.png" alt="imagem do jogo fifa">
+                    <img src="../projeto gamer/assets/images/Group 4fifa.svg" alt="imagem do jogo fifa">
                 </div>
 
                 <div>
-                    <img src="../projeto gamer/assets/images/csgo.png" alt="imagem do jogo cs go">
+                    <img src="../projeto gamer/assets/images/Group 3csgo.svg" alt="imagem do jogo cs go">
                 </div>
             </div>
         </section>
@@ -123,6 +125,7 @@
         <section class="progamer">
             <div class="time">
                 <h2>entre para o time progamer</h2>
+                <hr id="linhatime">
             </div>
         </section>
     </main>

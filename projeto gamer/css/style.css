@@ -44,7 +44,7 @@ body {
 header {
     position: fixed;
     width: 100vw;
-    height: 60px;
+    height: 140px;
     z-index: 100;
     background-color: #1B1426;
     top: 0;
@@ -53,7 +53,15 @@ header {
 
 
 header .header-top {
-    display: none;
+    display: block;
+    border-bottom: 2px solid #f9aa01;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-top .contatos {
+    width: 420px;
 }
 
 /*menu lateral*/
@@ -66,7 +74,7 @@ header .header-bottom nav {
     flex-direction: column;
     width: 80vw;
     height: calc(100vh - 60px);
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7),
             rgba(27, 20, 38, 0.4));
     backdrop-filter: blur(6px);
@@ -79,11 +87,10 @@ header .header-bottom nav>a {
     justify-content: center;
     align-items: center;
     gap: 28px;
-    border-bottom: 1px solid #f9aa01;
-    padding: 25px 0;
+    padding: 0;
     color: white;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     font-family: inter;
 }
 
@@ -123,6 +130,7 @@ header .menu-usuarios {
 .alinhamento-between-center {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .mostrarLateral {
@@ -132,26 +140,26 @@ header .menu-usuarios {
 /*main*/
 .banner-principal {
     background-image: url(../assets/images/valorant-pergunte-3-scaled\ 1liga-gamers-m.svg);
-    width: 375px;
+    background-size: contain;
+    width: 100%;
     height: 606px;
     margin-top: 60px;
     left: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
 section h1 {
     display: flex;
-    position: absolute;
-    top: 70px;
-    left: 80px;
 
     font-family: titiblack;
     font-size: 40px;
     text-transform: capitalize;
     color: white;
     text-shadow: 0px 0px 7px #FD4255;
+
 }
 
 .banner-principal a {
@@ -168,50 +176,95 @@ section h1 {
     font-family: titibold;
 }
 
-section .btn-sobre {
+/* section .btn-sobre {
     display: flex;
-    position: absolute;
-    top: 540px;
-    left: 110px;
-}
+   
+   
+} */
 
 /*card-box*/
 .sessao-gamer {
     background-color: #1B1426;
-    width: 375px;
+    width: 100%;
     height: 591px;
+    background-size: cover;
 }
 
 .cards {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 70px;
-}
-
-.fifa {
+    justify-content: space-evenly;
+    flex-direction: row;
     padding-top: 70px;
+
 }
 
 /*info-box*/
 .progamer {
     background-color: #f9aa01;
-    width: 375px;
+    width: 100%;
     height: 1535px;
     top: 0;
     left: 0;
+    background-size: cover;
 }
 
 .time h2 {
-    width: 336px;
+    width: 100%;
     height: 62px;
     color: black;
     font-size: 18px;
     font-family: titiblack;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 82px;
-    letter-spacing: 4px;
+    /* padding-top: 82px; */
+    letter-spacing: 3px;
     text-transform: uppercase;
+
+    display: flex;
+    position: relative;
+    top: 15px;
+    left: 600px;
+    background-size: cover;
+}
+
+/* Tablets >= 768px */
+@media screen and (min-width: 768px) {}
+
+/* Desktop >= 1200px*/
+@media screen and (min-width: 1200px) {
+    .layout-grid {
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    /* esconde os elementos desnecessários */
+    header .header-bottom .menu-hamburger,
+    header .header-bottom .menu-pontinhos,
+    header .header-bottom nav .phone,
+    header .header-bottom nav .mail,
+    header .header-bottom nav .midia-sociais {
+        display: none;
+    }
+
+
+    header .header-bottom nav {
+        position: static;
+        width: 440px;
+        height: 50px;
+        flex-direction: row;
+        align-items: center;
+        /*background-color: red;*/
+        justify-content: space-between;
+    }
+
+    header .header-bottom .menu-usuarios {
+        position: static;
+        width: 140px;
+        flex-direction: row;
+        height: auto;
+        background-color: transparent;
+        background-image: none;
+    }
+}
+
+#linhatime {
+    border: 1px #1B1426 solid;
 }
